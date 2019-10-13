@@ -31,7 +31,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True, 
 # This is the equivalent of /timeline/home on the Web.
 #---------------------------------------------------------------------------------------------------------------------
 
-for status in tweepy.Cursor(api.home_timeline).items(200):
+for status in tweepy.Cursor(api.home_timeline).items(1):
 	print(status._json)
 	
 #---------------------------------------------------------------------------------------------------------------------
