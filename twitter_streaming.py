@@ -21,9 +21,12 @@ oauth = OAuth()
 api = tweepy.API(oauth)
 quijote = open("Quijote.txt", "r", encoding='UTF8')
 
-for i in range(10000):
-    print (quijote.readline())
+for i in range(15906):
+    tweet = quijote.readline()
+    print (tweet)
+    api.update_status(tweet)
+    time.sleep(300)
+
 
 quijote.close()
 
-#api.update_status('Posting this with python')
