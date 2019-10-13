@@ -19,5 +19,11 @@ def OAuth():
 
 oauth = OAuth()
 api = tweepy.API(oauth)
+quijote = open("Quijote.txt", "r", encoding='UTF8')
 
-api.update_status('Posting this with python')
+for i in range(10000):
+    print (quijote.readline())
+
+quijote.close()
+
+#api.update_status('Posting this with python')
